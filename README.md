@@ -88,6 +88,77 @@ Calls: 217
 
 Hasil yang diperoleh dapat berbeda-beda tergantung spesifikasi perangkat dan dataset yang digunakan.
 
+## Mengubah Dataset Pengujian
+
+Program dirancang untuk menguji satu dataset Sudoku dalam satu kali eksekusi. Dataset yang digunakan dapat diubah secara manual pada file `main.py`.
+
+Pada bagian import:
+
+```python
+from datasets.sample_data import (
+    sudoku_easy
+)
+```
+
+Kemudian pada fungsi `main()`, pilih dataset yang ingin diuji:
+
+```python
+result = run_experiment(sudoku_easy)
+```
+
+### Pilihan Dataset
+
+Untuk menguji Sudoku tingkat mudah:
+
+```python
+from datasets.sample_data import (
+    sudoku_easy
+)
+```
+
+```python
+result = run_experiment(sudoku_easy)
+```
+
+Untuk menguji Sudoku tingkat menengah:
+
+```python
+from datasets.sample_data import (
+    sudoku_intermediate
+)
+```
+
+```python
+result = run_experiment(sudoku_intermediate)
+```
+
+Untuk menguji Sudoku tingkat ekstrem:
+
+```python
+from datasets.sample_data import (
+    sudoku_extreme
+)
+```
+
+```python
+result = run_experiment(sudoku_extreme)
+```
+
+Setelah mengubah dataset yang digunakan, simpan file kemudian jalankan kembali program:
+
+```bash
+python main.py
+```
+
+atau
+
+```bash
+py main.py
+```
+
+Hasil yang ditampilkan akan menyesuaikan dengan tingkat kesulitan Sudoku yang dipilih.
+
+
 ## Tujuan Proyek
 
 Proyek ini dibuat untuk mempelajari dan menganalisis performa algoritma Backtracking dan Constraint Propagation dalam menyelesaikan permasalahan Sudoku, khususnya dari segi efisiensi waktu dan jumlah proses pencarian yang dilakukan.
